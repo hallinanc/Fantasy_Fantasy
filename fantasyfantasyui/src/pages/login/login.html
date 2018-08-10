@@ -1,0 +1,37 @@
+<ion-content class="login-content" padding>
+  <div class="welcome">Game of Thrones Fantasy</div>
+  <ion-row class="logo-row">
+    
+    <ion-col width-2000>
+      <img class="displayed"  height="200 px" width="2000 px" src="https://bestwallpapers.co/wp-content/uploads/2018/05/hbo-game-of-thrones-wallpapers-wallpaper-cave.jpg"/>
+    </ion-col>
+    
+  </ion-row>
+  <div class="login-box">
+    <form (ngSubmit)="login()" #registerForm="ngForm">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+            
+            <ion-item>
+              <ion-input type="text" placeholder="User Name" name="userName" [(ngModel)]="user.userName" required></ion-input>
+            </ion-item>
+            
+            <ion-item>
+              <ion-input type="text" placeholder="Your Name" name="playerName" [(ngModel)]="user.playerName" required></ion-input>
+            </ion-item>
+            
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Login</button>
+        </ion-col>
+      </ion-row>
+      
+    </form>
+    <button ion-button class="register-btn" block clear (click)="createAccount()">Create New Account</button>
+  </div>
+</ion-content>

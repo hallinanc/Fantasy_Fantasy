@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      Member Area
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content class="home" padding>
+  <h3>Welcome inside, {{playerName}}!</h3>
+  <p>
+      Your User Name is: {{userName}}<br>
+  </p>
+  <button ion-button block >Change League</button>
+  <button ion-button block >League</button>
+  <button ion-button block (click)="myTeam()">My Team</button>
+  <button ion-button block (click)="teammatch()">Match</button>
+  <button ion-button block (click)="characterlookup()">Character Look Up</button>
+  <button ion-button block >Notifications</button>
+  <button ion-button block >Team Changes</button>
+  <button ion-button block >Draft</button>
+  <button ion-button block >My Account</button>
+  
+</ion-content>
+
